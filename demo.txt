@@ -1,0 +1,13 @@
+同步代码
+
+
+
+git add -A ：是上面两个功能的合集（git add --all的缩写）
+
+3.3提交已暂存的文件
+
+1. git commit -m "备注说明"
+
+这个命令表示添加备注
+
+2. git push -u origin master:master 
