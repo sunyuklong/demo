@@ -1,0 +1,41 @@
+/* CLASS */
+.clearfix{zoom:1;}
+.clearfix:after{content:'';clear:both;overflow:hidden;height:0;display:block;}
+
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+
+li{border-bottom:3px solid #CCC;padding:22px;}
+.link{width:300px;}
+body{background:#EEE;}
+a.edit{
+	display:block;
+	background:green;
+	color:#FFF;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	width:100px;
+	margin:10px 0;
+}
+#home{
+	display:block;
+	background:green;
+	color:#FFF;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	width:160px;
+	margin:10px 0;
+}
+.delete{background:#65121A !important;}
+
+
+.flashimg{margin-right:30px;}
+
+.imginfo li{margin-bottom:8;border-bottom:none;padding:0;}
+
+body table td{border-bottom:2px solid #AAA;}
+body table th{font-weight:bold;font-size:24px;}
+
+

@@ -1,0 +1,92 @@
+<div id="sidebarcol" class="right">
+          	<div class="search_right_new boxes">
+        <form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+			<input type="hidden" name="kwtype" value="0" />						
+			<input name="q" id="search" class="input" type="text" value="请输入关键字">
+			<input name="dosubmit" type="submit" value="" class="search_Button">
+		</form>
+	</div>     <!--热门排行-->
+     <div class="hot_name_right boxes">
+    <div class="hot_new_top clearfix">
+        <span>热门排行</span>
+        <ul id="hot_new_ul">
+        	<li class="sild_new current_new" style="width:100px">一周</li>
+            <li style="width:86px">一月</li>
+        </ul>
+    </div>
+    <div class="paihang">
+        <div style="display:block">
+            <ul class="clearfix">
+
+      {dede:arclist sort='hot' subday='7' row=10}
+
+            	            	                <li>
+                    <span class="ph_span">[field:global runphp='yes' name=autoindex]if(@me<=9) @me = '0'.@me;if(@me==10) @me=@me;[/field:global]</span>
+                    <a title="[field:fulltitle/]" href="[field:arcurl/]" class="sky_blue" target="_blank">[field:title/]</a>
+                </li>
+                
+       {/dede:arclist}
+                                
+                            	
+            </ul>
+        </div>
+        <div>
+            <ul class="clearfix">
+
+      {dede:arclist sort='hot' subday='30' row=10}
+
+            	            	                <li>
+                    <span class="ph_span">[field:global runphp='yes' name=autoindex]if(@me<=9) @me = '0'.@me;if(@me==10) @me=@me;[/field:global]</span>
+                    <a title="[field:fulltitle/]" href="[field:arcurl/]" class="sky_blue" target="_blank">[field:title/]</a>
+                </li>
+                
+       {/dede:arclist}
+
+                                
+            </ul>
+        </div>
+                
+    </div>
+</div><!--热门排行榜Top10-->
+<input type="hidden" id="mail">
+ <div class="baidu_clb boxes">
+{dede:myad name='indexTopBanner2'/}
+ <!-- 广告位：右侧边栏广告1-300*250 --></div>
+
+     <!--话题-->
+          <div class="subject boxes">
+     <h1>热门话题</h1>
+<div class="label" style="background-color:#fff;">
+{dede:tag row='10' getall='1' sort='month'}
+            <a href='[field:link/]' style="color:;font-size:16px;">[field:tag /]</a>&nbsp;&nbsp;&nbsp;
+          {/dede:tag}
+	</div>     </div>
+          <div class="baidu_clb boxes">
+		  <!-- 广告位：右侧边栏广告2-300*250 -->
+{dede:myad name='innerTopBanner1'/}
+</div>
+
+          
+          <!--编辑推荐-->
+     <div class="editor boxes">
+     <div class="title">
+    <span>编辑推荐</span>
+</div>
+<ul>
+      {dede:arclist flag='c' titlelen=42 row=6}
+
+                        <li>
+                <div class="pic">
+                    <a href="[field:arcurl/]" target="_blank"><img width="90" height="60" src="[field:litpic/]" alt="[field:fulltitle/]" /></a>
+                </div>
+                <p><a href="[field:arcurl/]" target="_blank" title="[field:fulltitle/]">  [field:title/]</a></p>
+            </li>
+         {/dede:arclist}
+                    
+            
+</ul>     </div>
+     <div class="baidu_clb boxes">
+	 <!-- 广告位：右侧边栏广告3-300*250 -->
+{dede:myad name='right_ad3'/}
+	 </div>
+</div>

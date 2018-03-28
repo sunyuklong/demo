@@ -1,0 +1,35 @@
+<?php
+$tmpdir = "aa3978c55acb99ac";
+$vtime = 20140814;
+$files[0] = "include/dedesql.class.php";
+$files[1] = "include/dedesqli.class.php";
+$files[2] = "include/shopcar.class.php";
+$files[3] = "dede/config.php";
+$files[4] = "plus/recommend.php";
+$files[5] = "include/datalistcp.class.php";
+$files[6] = "dede/album_edit.php";
+$files[7] = "dede/soft_edit.php";
+$files[8] = "dede/login.php";
+$files[9] = "include/vdimgck.php";
+$files[10] = "include/data/fonts/1.ttf";
+$files[11] = "include/data/fonts/2.ttf";
+$files[12] = "include/data/fonts/3.ttf";
+$files[13] = "include/helpers/channelunit.helper.php";
+$files[14] = "data/module/606c658db048ea7328ffe1c7ae2a732f.xml";
+$files[15] = "include/inc/inc_fun_funAdmin.php";
+$files[16] = "include/taglib/flink.lib.php";
+$files[17] = "include/filter.inc.php";
+$fileConut = 17;
+$sqls[] = "20140304.sql";
+$sqls[] = "20140305.sql";
+$sqls[] = "20140311.sql";
+$sqls[] = "20140313.sql";
+$sqls[] = "20140415.sql";
+$sqls[] = "20140606.sql";
+$sqls[] = "20140612.sql";
+$sqls[] = "20140623.sql";
+$sqls[] = "20140627.sql";
+$sqls[] = "20140724.sql";
+$sqls[] = "20140725.sql";
+$sqls[] = "20140814.sql";
+?>

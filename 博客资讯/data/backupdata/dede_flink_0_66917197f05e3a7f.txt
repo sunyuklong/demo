@@ -1,0 +1,5 @@
+INSERT INTO `dede_flink` VALUES('2','1','http://www.92ufo.com','UFO探秘网','','','','1226375403','1','2');
+INSERT INTO `dede_flink` VALUES('9','1','http://www.adminbuy.cn','模板王','','','','1227772717','1','2');
+INSERT INTO `dede_flink` VALUES('8','1','http://www.yiquantou.com','飘花电影网','','','','1227772703','1','2');
+INSERT INTO `dede_flink` VALUES('10','1','http://www.xd11.com','新埭','','','','1421820473','1','2');
+INSERT INTO `dede_flink` VALUES('11','1','http://www.henhaixiu.com','糗事百科成人版 成年','','','','1421820486','1','2');

@@ -1,0 +1,408 @@
+﻿@import url(reset.css);
+html{ background-color:#ececec;}
+body{
+    background-color:#ececec;
+    font-size:14px;
+    font-family: "微软雅黑" Arial;
+    color:#585858;
+	position:relative;
+}
+
+a{
+    color:#0086be;
+    text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+input:focus{
+	outline:none;
+}
+
+.wrap{
+    width: 990px;
+    margin: 0 auto;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+#body .clear, .clear
+{
+    float: none;
+    clear: both;
+	display: block;
+    width: 100%;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	line-height: 0;
+	font-size: 0;
+}
+
+.clearTwo:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearTwo{display:inline-block;}
+
+.clearafter:after
+{
+    clear: both;
+	display: block;
+	content: " ";
+	height: 0;
+}
+
+/*layout*/
+
+#header{
+    background:#394045;
+	height:86px
+}
+
+
+
+.order_Button {
+	background: url(../img/common/search.jpg) repeat-x 0 50%;
+	padding: 0;
+	border: 0;
+	color:#fff;
+	height:19px;
+	padding-bottom: 1px;
+	cursor:pointer;
+}
+
+
+/*logo*/
+.logo {
+	height:86px;
+	font-family: "Microsoft Yahei",Arial;
+}
+.logo div#header_main_ad{
+	float: right;
+	width: 727px;
+}
+
+#logo {
+	float: left;
+	padding:20px 70px 0 0px;
+}
+
+/*nav*/
+#nav {
+	height:52px;
+	padding-top:34px;
+}
+
+#nav a {
+	display:inline-block;
+	font-size:16px;
+	height:16px;
+	line-height:16px;
+	color:#dfdfdf;
+	position:relative;
+	padding:0 17px 4px 17px;
+	border-right:1px solid #25292c;
+	font-family: "Microsoft Yahei",Arial;
+}
+#nav .home_new{
+	background:url(../img/common/home1.gif) no-repeat;
+	padding-left:20px;
+}
+#nav a em{
+	position:absolute;
+	bottom:-30px;
+	width:24px;
+	height:12px;
+	background:url(../img/common/home_pic_new.gif) no-repeat;
+	z-index:9989;
+	left:34%;
+	overflow:hidden;
+}
+#nav .home_new_last{
+	border:none;
+}
+#nav .home_new_last span{
+	width:32px;
+	height:31px;
+	position:absolute;
+	right:-20px;
+	top:-30px;
+	background:url(../img/common/cxj_new.gif) no-repeat;
+	z-index:9989;
+}
+#nav a.current {
+	color: #000;
+	text-shadow: 1px 1px #e7e6e6;
+	text-decoration: none;
+	background: url(../img/common/navCur.jpg) repeat-x 0 100%;
+}
+
+/*rss*/
+#RSS{
+	float:right;
+	padding-right:5px;
+	width:22px;
+	margin-top:3px;
+}
+
+/*关注*/
+.attention{
+	float: right;
+	width: 200px;
+	margin: 3px 5px 0 0;
+	text-align:right;
+}
+
+.v{
+	background: url(../img/common/v.gif) no-repeat 100% 50%;
+	padding-right: 18px;
+}
+
+.attention .fans{
+	color: #ccc;
+	font-size: 12px;
+}
+
+.add img{
+	vertical-align: middle;
+	padding-left: 5px;
+}
+
+/*body*/
+#body{
+    background-color: #e9e9e7;
+    padding: 20px 0;
+	font-family: "Microsoft Yahei",Arial;
+}
+
+h1{
+	font-size:30px;
+	color:#000;
+}
+
+/*left*/
+div#content{
+	width: 670px;
+}
+div#content_about{
+	width: 970px;
+}
+
+#sidebarcol{
+	width: 300px;
+}
+
+#main{
+    background-color:#fff;
+    padding: 20px 10px;
+	z-index:999;
+}
+
+/*pages*/
+#pages {
+	text-align: center;
+	/*height: 22px;*/
+	font-family:Georgia;
+}
+
+#pages a{
+	display:inline-block;
+	color: #0086be;
+	height:16px;
+	line-height:14px;
+	padding: 0px 5px 4px;
+	text-align:center;
+	background-color: #e8e8e8;
+	text-shadow: 1px 1px #f2f2f2;
+	border: 1px solid #c4c4c4;
+	margin: 0 1px 3px;
+}
+#pages .page_index{
+    color:#aeaeab;
+}
+
+#pages .disable{
+	color: #aeaeab;
+	text-shadow: 0 0;
+	cursor:default;
+	text-decoration:none;
+}
+
+#pages span.current,#pages span{
+	display:inline-block;
+	padding: 0 5px 4px;
+	height:16px;
+	line-height:14px;
+	text-align:center;
+	background-color: #5c5c5c;
+	color: #fff;
+	border: 1px solid #5c5c5c;
+	margin: 0 1px 3px;
+}
+
+#pages #prevpage,#pages #nextpage,#pages #firstpage,#pages #lastpage,#pages .a1{
+	padding: 3px 5px 1px;
+    vertical-align: bottom;
+	_vertical-align: top;
+}
+
+/*footer*/
+#footer{
+    border-top:6px solid #bababa;
+    padding: 20px 0;
+    overflow: hidden;
+    font-size: 12px;
+	background:#2a2a2a
+}
+.footer_bottom{
+   
+   padding-top:20px;
+   text-align:center;
+   width:990px;
+   margin:0 auto;
+}
+.footer_bottom div{
+   
+   line-height:20px;
+}
+.footer_bottom a{
+    color: #919191;
+    display: inline-block;
+}
+div.section{
+	float: left;
+	color: #919191;
+	line-height: 20px;
+}
+
+div.border{
+	border-right: 1px solid #161616;
+	border-left: 1px solid #454545;
+	padding: 0 30px;
+}
+
+div.section.b{
+	padding: 0;
+	border-right: 1px solid #454545;
+	border-left: 1px solid #161616;
+}
+
+.section.f{
+	border-left: 0;
+	padding:0 20px 0 10px;
+}
+
+.section.l{
+	padding-left: 30px;
+	color:#3d3d3d;
+	width:252px;
+}
+
+div.section h3{
+	color: #ececec;
+	font-size: 14px;
+}
+
+.section.l a{
+	color:#919191;
+	display:inline-block;
+}
+
+#order{
+	border-top:2px solid #000;
+	border-bottom:2px solid #000;
+}
+
+.order_Button{
+	float: left;
+	width: 68px;
+	margin:2px 0 0 10px;
+}
+
+div.section .attention{
+	width: 250px;
+	float: none;
+	margin-bottom: 10px;
+}
+div.section a.v{
+	font-size: 14px;
+	color:#ececec;
+}
+
+div.section .fans{
+	color:#a9a9a9;
+}
+
+a.jia{
+	display:inline-block;
+	width:20px;
+	height:16px;
+	vertical-align: text-top;
+	background: url(../img/common/jiathis_ico.png) no-repeat 50% -144px;
+}
+
+.backToTop{
+	display: none;
+	width: 43px;
+	height:44px;
+	line-height: 1.4;
+	color: #105590;
+	font-size: 14px;
+	text-align: center;
+	position: fixed;
+	_position: absolute;
+	left: 50%;
+	bottom: 165px;
+	_bottom: "auto";
+	cursor: pointer;
+	background: url(../img/common/top.jpg) no-repeat scroll center top;
+	margin-left: 495px;
+	text-indent:-9999px;
+}
+
+.backToTop span{
+	display:block;
+	visibility:hidden;
+	padding-top:10px;
+}
+
+/*评论弹出ie6*/
+body #ds-wrapper {
+	_position:absolute;
+	_bottom:auto;
+	_top:expression(eval(document.documentElement.scrollTop+this.offsetHeight));
+}
+
+/*404*/
+.error404{
+	margin-top: -20px;
+	padding: 76px 0 62px;
+	background-color:#f0f0f0;
+}
+
+.error404 div{
+	width:728px;
+	margin:0 auto;
+	text-align:center;
+}
+
+.error404 div img{
+    font-size:70px;
+    font-family:Comic Sans MS;
+    color: #00adef;
+}
+
+.error404 div p{
+	padding-top:50px;
+	font-size:14px;
+}
+
+#index.error{
+    padding-bottom: 0;
+}

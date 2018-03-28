@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=gb2312" http-equiv="Content-Type" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" media="screen, projection" />
+<link rel="Stylesheet" type="text/css" href="/dedemao/css/index.css" />
+<link rel="stylesheet" type="text/css" href="/dedemao/css/auto.css" />
+<script type="text/javascript" src="/dedemao/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/dedemao/js/kuailiyu.js"></script>
+<script type="text/javascript" src="/dedemao/js/dong_3d.js"></script>
+<script type="text/javascript" src="/dedemao/js/ga.js"></script>
+<!--[if IE]>
+<script type="text/javascript" src="/dedemao/js/jquery.placeholder.js"></script>
+<![endif]-->
+<!--[if IE 6]>
+<script src="/dedemao/js/belatedPNG.js"></script>
+<script>
+/* EXAMPLE */
+DD_belatedPNG.fix('*,.png, img, #tags');
+/* string argument can be any CSS selector */
+/* .png_bg example is unnecessary */
+/* change it to what suits you! */
+</script>
+<![endif]-->
+</head>
+<body>
+    {dede:include filename="head.htm"/}
+        <div id="body" class="clearfix">
+    	<div class="wrap">
+	        <div id="content" class="left">
+	            <div id="tags"><span>{dede:type}[field:typename /]{/dede:type}</span></div>
+				<div id="main">
+	                <div id="article">
+    {dede:list pagesize='10'}
+                                                                <div class="post">
+                            <div class="content">
+                                <div class="art_img">
+                                    <a href="[field:arcurl/]" rel="bookmark">
+                                        <img src="[field:litpic/]" alt="[field:fulltitle/]" />
+                                    </a>
+                                </div>
+                                <div class="art_right">
+                                    <h4><a href="[field:arcurl/]" rel="bookmark">[field:fulltitle/]</a></h4>
+                                    <div class="postmeta">
+                                        <a href="#">[field:writer/]</a><span label="dynamic_load_tag" field="inputtime" recordid="5269" class="left_author_span">[field:pubdate function="GetDateTimeMK(@me)"/]</span>&nbsp;<em class="tag"><span class='left_tag_span'>[field:id function=GetTags(@me)/]</span></em>
+                                    </div>
+                                    <p class="summary">[field:description function='cn_substr(@me,130)'/]...<a rel="bookmark" href="[field:arcurl/]"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+    {/dede:list}
+               
+	                </div>
+					<div id="pages">
+                    {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}
+                    </div>	            </div>
+	        </div>
+
+			<script>
+$(function(){
+     var aInput=document.getElementById('search')
+
+      aInput.onfocus=function(){
+           aInput.style.boxShadow="0 0 5px #000"
+      }
+       aInput.onblur=function(){
+           aInput.style.boxShadow="none"
+      }
+})
+$(function(){
+     var aMail=document.getElementById('mail')
+
+      aMail.onfocus=function(){
+           aMail.style.boxShadow="0 0 5px #000"
+      }
+       aMail.onblur=function(){
+           aMail.style.boxShadow="none"
+      }
+})
+</script>
+{dede:include filename="right.htm"/}
+	        <div class="clear"></div>
+        </div>
+    </div>
+    <script>
+        var dynamic_load = false;
+        var recordids = Array();
+        $("[label=dynamic_load_tag][field=inputtime]").each(function(i, n) {
+            var n = $(n);
+            recordids[i] = n.attr('recordid');
+            var s = n.text();
+            if(s.match(/[^\x00-\xff]/g))
+            {
+                dynamic_load = true;
+            }
+        });
+        if(dynamic_load == true)
+        {
+            recordids = recordids.join(',');
+            $.getJSON("/api.php?op=dynamic_load&field=inputtime&modelid=1&id="+recordids+"&callback=?", function(data) {
+                var datas = data.data;
+                for(k in datas)
+                {
+                    $("[label=dynamic_load_tag][field=inputtime]").each(function(i, n) {
+                        var n = $(n);
+                        if(n.attr('recordid') == k)
+                        {
+                            n.html(datas[k]);
+                        }
+                    });
+                }
+            });
+        }
+    </script>
+    {dede:include filename="footer.htm"/}
+
+
+</body>
+</html>

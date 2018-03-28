@@ -1,0 +1,1 @@
+<li><a title="[field:fulltitle/]" href="[field:arcurl/]" target="_blank" class="bfd_pic"><img src="[field:litpic/]"></a><div class="rec_content"><h3><a href="[field:arcurl/]" title="[field:fulltitle/]" target="_blank">[field:fulltitle/]</a></h3><p>[field:description/]&nbsp;<a href="[field:arcurl/]" style="color:#0086BE;font-size:12px;" target="_blank">[ÏêÏ¸]</a></p></div></li>

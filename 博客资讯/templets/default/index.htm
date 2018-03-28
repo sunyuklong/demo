@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=gb2312" http-equiv="Content-Type" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" media="screen, projection" />
+<link rel="Stylesheet" type="text/css" href="/dedemao/css/index.css" />
+<link rel="stylesheet" type="text/css" href="/dedemao/css/auto.css" />
+<script type="text/javascript" src="/dedemao/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/dedemao/js/kuailiyu.js"></script>
+<script type="text/javascript" src="/dedemao/js/dong_3d.js"></script>
+<script type="text/javascript" src="/dedemao/js/ga.js"></script>
+<!--[if IE]>
+<script type="text/javascript" src="/dedemao/js/jquery.placeholder.js"></script>
+<![endif]-->
+<!--[if IE 6]>
+<script src="/dedemao/js/belatedPNG.js"></script>
+<script>
+/* EXAMPLE */
+DD_belatedPNG.fix('*,.png, img, #tags');
+/* string argument can be any CSS selector */
+/* .png_bg example is unnecessary */
+/* change it to what suits you! */
+</script>
+<![endif]-->
+</head>
+<body>
+{dede:include filename="head.htm"/}
+
+<script type="text/javascript" src="/dedemao/js/conference_focus.js"></script>
+
+    <div id="body" class="clearfix">
+	<div class="wrap">
+			<div id="content" class="left">
+			        <div id="hot">
+                    <a id="hotleft"></a>
+                    <a id="hotright"></a>
+	            	<ul class="act_width1" id="pic">
+    {dede:arclist flag='f' row=5 titlelen=32 }
+
+	            		<li class="display" id="image_[field:global name=autoindex/]">
+	            			<a title="[field:fulltitle/]" rel="bookmark" href="[field:arcurl/]">
+	            				<img width="670px" height="330px"  src="[field:litpic/]" alt="[field:fulltitle/]">
+	            			</a>
+	            			<div class="word" style="opacity: 0.85; display: block;"><a title="[field:fulltitle/]" rel="bookmark" href="http://www.kuailiyu.com/article/5214.html">[field:fulltitle/]</a></div>
+	            		</li>
+	{/dede:arclist}	            	
+					            	</ul>
+	            	<ul id="thumbs">
+					            		<li><a href="javascript:;" id="thumb_1" class="current"></a></li>
+					            		<li><a href="javascript:;" id="thumb_2" class="current"></a></li>
+					            		<li><a href="javascript:;" id="thumb_3" class="current"></a></li>
+					            		<li><a href="javascript:;" id="thumb_4" class="current"></a></li>
+					            		<li><a href="javascript:;" id="thumb_5" class="current"></a></li>
+					                </ul>
+
+	            </div><!--index_hot_image-->
+			            <div id="main">
+	                <div id="article">
+	        		
+    {dede:arclist typeid='1,2,3,4,5,6' row=10 titlelen=32 noflag='h' limit='0,5'}
+     																		                	<div class="post">
+	                		<div class="content">
+	                			<div class="art_img">
+	                				<a href="[field:arcurl/]" rel="bookmark">
+	                					<img src="[field:litpic/]" alt="[field:fulltitle/]" />
+	                				</a>
+	                			</div>
+	                			<div class="art_right">
+	                				<h4><a href="[field:arcurl/]" rel="bookmark">[field:fulltitle/]</a></h4>
+	                				<div class="postmeta">
+	                					baoqger<span class="left_author_span">[field:pubdate function="GetDateTimeMK(@me)"/]</span>&nbsp;<em class="tag"><span class='left_tag_span'>[field:id function=GetTags(@me)/]</span></em>
+	                				</div>
+	                				<p class="summary">
+[field:description function='cn_substr(@me,130)'/]...<a rel="bookmark" href="[field:arcurl/]"></a>
+	                				</p>
+	                			</div>
+	                		</div>
+	                	</div>
+	                				
+	{/dede:arclist}                                    										                	
+	                	<div id="index_middle_ad"><!-- 广告位：首页横幅广告-670*90 -->
+{dede:myad name='indexTopBanner1'/}
+<style>
+#index_middle_ad {
+margin-bottom: 30px;
+padding: 20px 0;
+background: #e9e9e7;
+width: 670px;
+margin-left: -10px;
+}
+#index_middle_ad div {
+width: 670px;
+padding: 0;
+background-color: #e9e9e7;
+margin-left: 0;
+}
+</style><!--Kuailiyu_Left_1-->
+</div>													
+
+    {dede:arclist typeid='1,2,3,4,5,6' row=10 titlelen=32 noflag='h' limit='5,5'}
+     																		                	<div class="post">
+	                		<div class="content">
+	                			<div class="art_img">
+	                				<a href="[field:arcurl/]" rel="bookmark">
+	                					<img src="[field:litpic/]" alt="[field:fulltitle/]" />
+	                				</a>
+	                			</div>
+	                			<div class="art_right">
+	                				<h4><a href="[field:arcurl/]" rel="bookmark">[field:fulltitle/]</a></h4>
+	                				<div class="postmeta">
+	                					baoqger<span class="left_author_span">[field:pubdate function="GetDateTimeMK(@me)"/]</span>&nbsp;<em class="tag"><span class='left_tag_span'>[field:id function=GetTags(@me)/]</span></em>
+	                				</div>
+	                				<p class="summary">
+[field:description function='cn_substr(@me,120)'/]...<a rel="bookmark" href="[field:arcurl/]"></a>
+	                				</p>
+	                			</div>
+	                		</div>
+	                	</div>
+	                				
+	{/dede:arclist}
+                    
+	
+	                										
+						                </div>
+<div id="pages"><a id="firstpage" href="/plus/list.php?tid=1">更多内容</a></div>
+	            </div>
+				<div class="div20"></div>
+	        </div>
+
+{dede:include filename="right.htm"/}
+
+	        <div class="clear"></div>
+        </div>
+    </div>
+
+{dede:include filename="footer.htm"/}
+
+</body>
+</html>
+

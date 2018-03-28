@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>">
+<title>###</title>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href='css/tb-box.css' rel='stylesheet' type='text/css' />
+<link href='css/dahui.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<a id="home" href="flash.php">返回到幻灯片列表</a>
+<form action="flash_add.php" method="post" enctype="multipart/form-data">
+<input type="hidden" name="dopost" value="add" />
+图片:<input name="flashimg" type="file"size="30"/>
+<br/>
+<br/>
+链接(src):<input class="link" name="link" type="text"/>
+<br/>
+<br/>
+Alt:<input type="text" name="alt"/>
+<br/>
+<br/>
+排序:<input type="text" name="sequence" value="100"/>按照数字的大小排序
+<br/>
+<br/>
+<input type="submit" name="Submit" value=" 提 交 " class="coolbg np" />　 　
+<input type="reset" name="Submit" value=" 重 置 " class="coolbg np" />
+</form>
+</body>
+</html>

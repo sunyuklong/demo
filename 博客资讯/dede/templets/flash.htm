@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>">
+<title>###</title>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href='css/tb-box.css' rel='stylesheet' type='text/css' />
+<link href='css/dahui.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<div class="clearfix">
+<a id="home" class="fl" href="flash_add.php">增加幻灯片</a>
+<a id="home" style="margin-left:10px;" class="fr" target="_blank" href="http://www.webyjs.com/dvt/">DedeCms视频教程</a>
+<a id="home" style="margin-left:10px;"  class="fr ml5" target="_blank" href="http://www.webyjs.com/">本插件作者网站</a>
+<a id="home" style="margin-left:10px;"  class="fr ml5" target="_blank" href="http://www.webyjs.com/archives/203.html">本插件主页</a>
+
+</div>
+<?php
+$i = 1;
+?>
+<table width="100%">
+	<tr>
+		<td>序号</td>
+		<td>图片</td>
+		<td>排序</td>
+		<td>alt</td>
+		<td>链接</td>
+		<td>是否显示</td>
+		<td>编辑</td>
+		<td>删除</td>
+	</tr>
+	{dede:datalist}
+	<tr>
+		<td><h1 style="color:red;font-size:36px;"><?php echo $i++;?></h1></td>
+		<td><img height="80" src="{dede:field.img_path /}"/></td>
+		<td>{dede:field.sequence /}</td>
+		<td>{dede:field.alt /}</td>
+		<td>{dede:field.link /}</td>
+		<td>
+		<a <?php
+			if($fields['hidden']) echo 'style="background:#000;"'; else echo 'style="background:orangered;"';
+		?>href="flash.php?ac=hidden&id={dede:field.id /}" class="edit">
+		<?php
+			if($fields['hidden'])
+				echo '未显示';
+			else
+				echo '显示中...';
+		?>
+		</a>
+		</td>
+		<td><a href="flash_edit.php?id={dede:field.id /}" class="edit">编辑</a></td>
+	<td><a href="flash.php?ac=delete&id={dede:field.id /}" class="edit delete" onclick="javascript:return confirm('确定要删除吗?');">删除</a>
+		</td>
+	</tr>
+	{/dede:datalist}
+</table>
+</body>
+</html>
